@@ -4,14 +4,14 @@ import { getFirestore } from 'firebase/firestore';
 import { getDatabase } from 'firebase/database';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC13psrZ9Uano4sf71mm8vTkxqgyAZq9DQ",
-  authDomain: "hale-courage-437710-j8.firebaseapp.com",
-  databaseURL: "https://hale-courage-437710-j8-default-rtdb.firebaseio.com",
-  projectId: "hale-courage-437710-j8",
-  storageBucket: "hale-courage-437710-j8.firebasestorage.app",
-  messagingSenderId: "1049464856968",
-  appId: "1:1049464856968:web:9b015611c32799c498da3d",
-  measurementId: "G-BKRWC9ZFQB"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
